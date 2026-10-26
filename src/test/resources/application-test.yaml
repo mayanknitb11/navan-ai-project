@@ -1,0 +1,9 @@
+# Integration-test profile: SAME local Docker Postgres as dev (navan-commerce-db on 5433),
+# but a SEPARATE `test` database so tests never touch dev data.
+# The database is auto-created by TestDatabaseInitializer if missing; Flyway migrates it
+# (V1__init.sql) at context startup, Hibernate validates. Tables are TRUNCATEd between tests.
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/navan_commerce_test
+    username: mayankbandil
+    password:

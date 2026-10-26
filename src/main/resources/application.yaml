@@ -1,0 +1,36 @@
+# Environment-neutral defaults. Machine-specific values live in application-dev.yaml
+# (activate with: spring.profiles.active=dev). Any key can still be overridden by env vars.
+spring:
+  application:
+    name: navan-commerce
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/navan_commerce}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:}
+  jpa:
+    # Schema is owned by Flyway (db/migration/V1__init.sql == DB_SCHEMA.md). Hibernate only verifies it.
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          # All DB time handling in Asia/Kolkata (canonical name — "IST" is ambiguous).
+          time_zone: Asia/Kolkata
+  flyway:
+    enabled: true
+  jackson:
+    # Timestamps render in IST (+05:30); see JacksonConfig.
+    time-zone: Asia/Kolkata
+    # Wire format is snake_case (external_id, tax_lines, ...); Java stays camelCase.
+    property-naming-strategy: SNAKE_CASE
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      # Reject unknown fields instead of silently dropping them (e.g. "class" vs "travelClass").
+      fail-on-unknown-properties: true
+    generator:
+      write-bigdecimal-as-plain: true
+
+server:
+  port: ${SERVER_PORT:8080}

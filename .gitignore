@@ -1,0 +1,40 @@
+# Build output
+/target/
+/build/
+/out/
+/bin/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven wrapper (keep required wrapper files tracked)
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+
+# IDE files
+/.idea/
+/.vscode/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+.metadata/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+/logs/
+/tmp/
+/temp/
+
+# Local env/config
+.env
+.env.*
+application-local*.yml
+application-local*.yaml

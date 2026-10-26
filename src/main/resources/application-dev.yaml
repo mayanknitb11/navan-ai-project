@@ -1,0 +1,23 @@
+# Local development profile — activate with: spring.profiles.active=dev
+# (IntelliJ: Run Configuration → Active profiles = dev)
+#
+# Values for THIS machine: 5432/8080 are taken by other local services,
+# so dev uses the Docker Postgres on 5433 and port 8085.
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/navan_commerce
+    username: mayankbandil
+    password:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8090
+
+logging:
+  level:
+    com.navan.commerce: DEBUG
