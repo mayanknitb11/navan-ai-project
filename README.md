@@ -1,5 +1,10 @@
 # navan-commerce
 
+Owner: Mayank Bandil
+Email: mayank.nitb11@gmail.com
+GitHub: https://github.com/mayanknitb11/navan-ai-project.git
+GitHub (SSH): git@github.com:mayanknitb11/navan-ai-project.git
+
 HTTP API for **flight / hotel / rail / Navan-fee transactions** and **frozen-snapshot invoices**.
 Java 17 · Spring Boot 3 · Spring Data JPA · PostgreSQL · Flyway.
 
