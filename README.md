@@ -75,6 +75,7 @@ Verify:
 ```bash
 curl localhost:8089/health        # {"status":"UP"}
 ```
+## Swagger UI
 
 Swagger UI (interactive docs): http://localhost:8089/swagger-ui/index.html
 OpenAPI JSON: http://localhost:8089/v3/api-docs
