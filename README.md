@@ -53,6 +53,16 @@ server:
 
 Schema is created automatically by Flyway on first run — no manual SQL needed.
 
+## Before running
+
+Make sure your local machine matches the project requirements before starting the app:
+
+- Java 17 is required (`java -version` should show 17.x)
+- PostgreSQL must be installed and running
+- The database and credentials in `src/main/resources/application-dev.yaml` must match your local setup
+
+If you see compilation errors like `Fatal error compiling` or `TypeTag :: UNKNOWN`, check the Java version first. This project is configured for Java 17, not newer JDKs.
+
 ## Run
 
 ```bash
@@ -67,6 +77,7 @@ curl localhost:8089/health        # {"status":"UP"}
 ```
 
 Swagger UI (interactive docs): http://localhost:8089/swagger-ui/index.html
+OpenAPI JSON: http://localhost:8089/v3/api-docs
 
 ## Test
 

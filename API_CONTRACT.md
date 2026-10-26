@@ -2,6 +2,10 @@
 
 Base URL (dev): `http://localhost:8089` — every response below is a **real captured response** from the running service.
 
+Swagger UI: `http://localhost:8089/swagger-ui/index.html`
+
+OpenAPI JSON: `http://localhost:8089/v3/api-docs`
+
 ## Conventions
 
 | Rule | Detail |
